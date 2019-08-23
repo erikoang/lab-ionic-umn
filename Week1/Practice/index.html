@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Ion</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css"
+    />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title text-center>Budget Planner</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-text>
+            <h1>Input Pengeluaran</h1>
+          </ion-text>
+        </ion-card-header>
+
+        <br />
+
+        <ion-card-content>
+          <ion-item>
+            <ion-input placeholder="Nama Pengeluaran"></ion-input>
+          </ion-item>
+          <br />
+          <ion-item>
+            <ion-input placeholder="Jumlah Pengeluaran"></ion-input>
+          </ion-item>
+          <br />
+
+          <ion-button color="danger" size="medium" fill="outline"
+            ><ion-icon size="medium" name="close"></ion-icon>Hapus</ion-button
+          >
+          <ion-alert-controller></ion-alert-controller>
+          <ion-button color="primary" size="medium" onclick="presentAlert()">
+            <ion-icon size="medium" name="add"></ion-icon>Tambah
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-content>
+        <ion-item>
+          <ion-text>Total Pengeluaran: Rp. 0,00</ion-text>
+        </ion-item>
+      </ion-content>
+    </ion-app>
+
+    <style>
+      h1 {
+        font-size: 40px;
+        font-weight: bolder;
+        color: black;
+      }
+    </style>
+
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
